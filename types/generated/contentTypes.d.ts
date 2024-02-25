@@ -362,21 +362,22 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
-export interface ApiWisataWisata extends Schema.CollectionType {
+export interface ApiWisataWisata extends Schema.SingleType {
   collectionName: 'wisatas';
   info: {
     singularName: 'wisata';
     pluralName: 'wisatas';
-    displayName: 'Wisata';
+    displayName: 'wisata';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
+    nama: Attribute.String & Attribute.Required;
     lokasi: Attribute.String & Attribute.Required;
     htm: Attribute.Integer & Attribute.Required;
     jam: Attribute.String & Attribute.Required;
-    fasilitas: Attribute.Blocks & Attribute.Required;
+    fasilitas: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

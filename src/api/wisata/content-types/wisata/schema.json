@@ -1,16 +1,20 @@
 {
-  "kind": "collectionType",
+  "kind": "singleType",
   "collectionName": "wisatas",
   "info": {
     "singularName": "wisata",
     "pluralName": "wisatas",
-    "displayName": "Wisata"
+    "displayName": "wisata"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
+    "nama": {
+      "type": "string",
+      "required": true
+    },
     "lokasi": {
       "type": "string",
       "required": true
@@ -24,7 +28,7 @@
       "required": true
     },
     "fasilitas": {
-      "type": "blocks",
+      "type": "string",
       "required": true
     }
   }
